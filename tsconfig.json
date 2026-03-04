@@ -19,7 +19,11 @@
       }
     ],
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "@/modules/*": ["./src/modules/*"],
+      "@/shared/*": ["./src/shared/*"],
+      "@/core/*": ["./src/core/*"],
+      "@/types": ["./src/types/index.ts"]
     }
   },
   "include": [
@@ -28,7 +32,9 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
-    "**/*.mts"
+    "**/*.mts",
+    "vitest.config.ts",
+    "vitest.setup.ts"
   ],
   "exclude": ["node_modules"]
 }
