@@ -13,3 +13,8 @@ pre-push:
   commands:
     test:
       run: pnpm test:run
+
+post-commit:
+  commands:
+    push:
+      run: git push
