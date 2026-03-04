@@ -2,22 +2,22 @@
  * 性能指标数据结构
  */
 export type PerformanceMetrics = {
-  /** 首次绘制时间 (First Paint) */
-  FP: number;
-  /** 首次内容绘制时间 (First Contentful Paint) */
-  FCP: number;
-  /** 最大内容绘制时间 (Largest Contentful Paint) */
-  LCP: number;
-  /** 可交互时间 (Time to Interactive) */
-  TTI: number;
-  /** DOM 就绪时间 */
-  DOMReady: number;
+  /** 首次绘制时间 */
+  FP?: number;
+  /** 首次内容绘制时间 */
+  FCP?: number;
+  /** 最大内容绘制时间 */
+  LCP?: number;
+  /** 可交互时间 */
+  TTI?: number;
   /** DNS 解析时间 */
-  DNS: number;
+  DNS?: number;
   /** TCP 连接时间 */
-  TCP: number;
-  /** 首字节时间 (Time to First Byte) */
-  TTFB: number;
+  TCP?: number;
+  /** 首字节时间 */
+  TTFB?: number;
+  /** DOM 就绪时间 */
+  DOMReady?: number;
   /** 时间戳 */
   timestamp: number;
   /** 页面 URL */
@@ -34,10 +34,10 @@ export type PerformanceTrend = {
   FCP: number;
   LCP: number;
   TTI: number;
-  DOMReady: number;
   DNS: number;
   TCP: number;
   TTFB: number;
+  DOMReady: number;
 };
 
 /**
@@ -60,6 +60,7 @@ export const PERFORMANCE_THRESHOLDS: PerformanceThreshold[] = [
   { metric: "FCP", good: 100, needsImprovement: 300 },
   { metric: "LCP", good: 250, needsImprovement: 400 },
   { metric: "TTI", good: 300, needsImprovement: 500 },
+  { metric: "TTFB", good: 100, needsImprovement: 200 },
 ];
 
 /**

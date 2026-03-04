@@ -4,7 +4,7 @@ import { PERFORMANCE_THRESHOLDS } from "@/modules/performance/types";
 
 describe("性能监控类型", () => {
   it("应该有正确的阈值配置", () => {
-    expect(PERFORMANCE_THRESHOLDS).toHaveLength(4);
+    expect(PERFORMANCE_THRESHOLDS).toHaveLength(5);
 
     const fpThreshold = PERFORMANCE_THRESHOLDS.find((t) => t.metric === "FP");
     expect(fpThreshold).toBeDefined();
@@ -18,10 +18,10 @@ describe("性能监控类型", () => {
       FCP: 320,
       LCP: 780,
       TTI: 950,
-      DOMReady: 450,
       DNS: 35,
       TCP: 45,
       TTFB: 120,
+      DOMReady: 450,
       timestamp: Date.now(),
       url: "https://example.com",
     };
