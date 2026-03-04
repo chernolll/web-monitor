@@ -1,36 +1,59 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Web Monitor
 
-## Getting Started
+前端监控系统 - 基于 Next.js 16 构建
 
-First, run the development server:
+## 技术栈
+
+- **框架**: Next.js 16 (App Router)
+- **UI**: React 19
+- **语言**: TypeScript 5
+- **样式**: Tailwind CSS 4
+- **代码质量**: Biome (替代 ESLint + Prettier)
+- **Git Hooks**: Lefthook + lint-staged
+- **测试**: Vitest + Testing Library
+- **提交规范**: Commitlint
+
+## 快速开始
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+# 安装依赖
+pnpm install
+
+# 开发模式
 pnpm dev
-# or
-bun dev
+
+# 运行测试
+pnpm test
+
+# 代码检查
+pnpm lint
+
+# 构建生产版本
+pnpm build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 项目结构
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+src/
+├── modules/           # 功能模块
+│   ├── performance/   # 性能监控
+│   ├── error/         # 异常监控
+│   ├── http/          # HTTP 监控
+│   ├── user-behavior/ # 用户行为
+│   └── alert/         # 告警模块
+├── shared/            # 共享资源
+│   ├── types/         # 通用类型
+│   └── utils/         # 工具函数
+└── __tests__/         # 测试文件
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 开发进度
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- [x] Phase 1: 基础设施搭建
+- [ ] Phase 2: 性能监控模块
+- [ ] Phase 3: 异常监控模块
+- [ ] Phase 4: HTTP 监控模块
+- [ ] Phase 5: 用户行为模块
+- [ ] Phase 6: 告警模块
+- [ ] Phase 7: 集成与优化
